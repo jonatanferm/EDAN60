@@ -1,10 +1,14 @@
+import os
 import sys
 sys.path.append('./liblinear-1.94/python')
 from liblinearutil import *
 
-y, x = svm_read_problem('concd.data')
-m = train(y, x, '-s 0 -v 4')
-save_model('concd.model', m)
-
-
-
+path = './Data/Train/libsvm/'
+ldir = os.listdir(path)
+c = 0
+for infile in ldir:
+	c += 1
+	print c
+	x, y = svm_read_problem(path+infile)
+	m = train(x, y, '-s 7')
+	save_model('./Data/Train/models/'+infile)

@@ -8,7 +8,8 @@ if __name__ == "__main__":
 	ldir = os.listdir(path)
 	r = {}
 	z = 0
-	for infile in ldir:
+	reduceddata = ['1ADAM10.TXT', '1ARGN10.TXT']
+	for infile in reduceddata:
 		f = open(path+infile, 'r')
 		s = f.readlines()
 		z += len(s)

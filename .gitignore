@@ -1,4 +1,6 @@
 *.pyc
 Data/*
+models/*
+liblinear-1.94/*
 *.pkl
 *.legend
